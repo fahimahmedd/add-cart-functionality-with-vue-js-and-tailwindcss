@@ -1,10 +1,11 @@
 <script setup>
 import ProductInfo from "./product-info.vue";
 import ProductThumbnail from "./product-thumbnail.vue";
+
 </script>
 
 <template>
-  <div class="grid grid-cols-2 gap-8">
+  <div class="grid grid-cols-2 gap-8 items-center">
     <ProductThumbnail />
     <ProductInfo />
   </div>

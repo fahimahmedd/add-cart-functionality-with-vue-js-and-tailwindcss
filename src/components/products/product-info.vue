@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+   import { useProduct } from '@/stores/useProduct';
+   const productUse = useProduct();
+</script>
 
 <template>
   <div class="product-block">
@@ -12,172 +15,169 @@
       <span class="text-slate-400 font-light text-sm ml-2">(2 Reviews)</span>
     </div>
     <div class="product-price flex items-center">
-      <div class="text-lg text-slate-500">$99.00</div>
+      <div class="text-lg text-slate-500 line-through">$99.00</div>
       <div class="text-2xl ml-3 text-primary font-bold">$79.00</div>
     </div>
-    <p>
+    <p class="text-md font-light">
       I must explain to you how all this mistaken idea of denoun cing ple
       praising pain was born and I will give you a complete account of the
       system, and expound the actual teaching.
     </p>
 
-    <div class="product-description d-flex">
-      <div class="description-item">
-        <div class="type-title">Type</div>
-        <h6>Watch</h6>
+    <div class="product-description flex gap-10 py-4">
+      <div>
+        <div class="text-sm font-regular text-slate-500">Type</div>
+        <h6 class="text-md font-medium text-slate-700 mt-1">Watch</h6>
       </div>
-      <div class="description-item">
-        <div class="type-title">Model Number</div>
-        <h6>Forerunner 290XT</h6>
+      <div>
+        <div class="text-sm font-regular text-slate-500">Model Number</div>
+        <h6 class="text-md font-medium text-slate-700 mt-1">
+          Forerunner 290XT
+        </h6>
       </div>
     </div>
 
-    <div class="product-color">
-      <h5>Band Color</h5>
-      <div class="color-box">
-        <div class="form-check">
+    <div>
+      <h5 class="text-lg font-medium">Band Color</h5>
+      <div class="color-box flex mt-2 gap-2">
+        <!-- Purple -->
+        <div>
           <input
-            class="form-check-input"
             type="radio"
-            name="product-color"
-            data-image="./images/product/p-1.png"
-            data-color="Purple"
             id="purple"
+            name="color"
+            class="hidden peer"
             checked
           />
-          <label class="form-check-label" for="purple">
-            <span style="background-color: #816bff"></span>
+          <label
+            for="purple"
+            class="radio-label peer-checked:border-primary"
+          >
+            <span class="block w-3.5 h-3.5 bg-primary rounded-full"></span>
           </label>
         </div>
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="product-color"
-            data-image="./images/product/p-2.png"
-            data-color="Accent"
-            id="accent"
-          />
-          <label class="form-check-label" for="accent">
-            <span style="background-color: #1fcec9"></span>
+
+        <!-- Accent -->
+        <div>
+          <input type="radio" id="accent" name="color" class="hidden peer" />
+          <label for="accent" class="radio-label peer-checked:border-teal-300">
+            <span class="block w-3.5 h-3.5 bg-teal-300 rounded-full"></span>
           </label>
         </div>
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="product-color"
-            data-image="./images/product/p-3.png"
-            data-color="Blue"
-            id="blue"
-          />
-          <label class="form-check-label" for="blue">
-            <span style="background-color: #4b97d3"></span>
+
+        <!-- Blue -->
+        <div>
+          <input type="radio" id="blue" name="color" class="hidden peer" />
+          <label for="blue" class="radio-label peer-checked:border-sky-500">
+            <span class="block w-3.5 h-3.5 bg-sky-500 rounded-full"></span>
           </label>
         </div>
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="product-color"
-            data-image="./images/product/p-4.png"
-            data-color="Black"
-            id="black"
-          />
-          <label class="form-check-label" for="black">
-            <span style="background-color: #3b4747"></span
-          ></label>
+
+        <!-- Black -->
+        <div>
+          <input type="radio" id="black" name="color" class="hidden peer" />
+          <label for="black" class="radio-label peer-checked:border-slate-700">
+            <span class="block w-3.5 h-3.5 bg-slate-700 rounded-full"></span>
+          </label>
         </div>
       </div>
     </div>
 
-    <div class="product-size">
-      <h5>Wrist Size</h5>
-      <div class="size-box">
-        <div class="form-check">
+    <div class="py-5">
+      <h5 class="text-lg font-medium">Wrist Size</h5>
+      <div class="mt-3 flex gap-2">
+        <div>
           <input
-            class="form-check-input"
+            class="hidden peer"
             type="radio"
-            name="product-size"
+            name="size"
             data-size="S"
             data-amount="69"
             id="size-s"
           />
-          <label class="form-check-label" for="size-s">
-            <span>S</span> $69
+          <label class="size-label" for="size-s">
+            <span class="font-bold text-md text-slate-700 mr-1">S</span> $69
           </label>
         </div>
-        <div class="form-check">
+        <div>
           <input
-            class="form-check-input"
+            class="hidden peer"
             type="radio"
-            name="product-size"
+            name="size"
             data-size="M"
             data-amount="79"
             id="size-m"
             checked
           />
-          <label class="form-check-label" for="size-m">
-            <span>M</span> $79
+          <label class="size-label" for="size-m">
+            <span class="font-bold text-md text-slate-700 mr-1">M</span> $79
           </label>
         </div>
-        <div class="form-check">
+        <div>
           <input
-            class="form-check-input"
+            class="hidden peer"
             type="radio"
-            name="product-size"
+            name="size"
             data-size="L"
             data-amount="89"
             id="size-l"
           />
-          <label class="form-check-label" for="size-l">
-            <span>L</span> $89
+          <label class="size-label" for="size-l">
+            <span class="font-bold text-md text-slate-700 mr-1">L</span> $89
           </label>
         </div>
-        <div class="form-check">
+        <div>
           <input
-            class="form-check-input"
+            class="hidden peer"
             type="radio"
-            name="product-size"
+            name="size"
             data-size="XL"
             data-amount="99"
             id="size-xl"
           />
-          <label class="form-check-label" for="size-xl">
-            <span>XL</span> $99
+          <label class="size-label" for="size-xl">
+            <span class="font-bold text-md text-slate-700 mr-1">XL</span> $99
           </label>
         </div>
       </div>
     </div>
 
-    <div class="product-quantity mt-3">
-      <div class="qty-input-container">
+    <div class="flex items-center gap-3 mt-3">
+      <div
+        class="flex items-center overflow-hidden border border-gray-300 rounded-md"
+      >
         <button
-          class="qty-count qty-count--minus"
+          class="quntity-button border-r text-3xl"
           data-action="minus"
           type="button"
+          @click="productUse.quantityMinus"
         >
           -
         </button>
         <input
-          class="product-qty"
+          class="w-10 h-10 text-center font-bold text-gray-700 bg-transparent appearance-none focus:outline-none"
           type="number"
           name="product-qty"
           min="1"
           max="10"
-          value="1"
+          :value="productUse.initQuantity"
         />
         <button
-          class="qty-count qty-count--add"
+          class="quntity-button border-l text-lg"
           data-action="add"
           type="button"
+          @click="productUse.quantityPlus"
         >
           +
         </button>
       </div>
-      <button class="c-button">Add to Cart</button>
-      <div class="favourite-listing">
-        <ion-icon name="heart-outline"></ion-icon>
+      <button
+        class="px-5 py-2 text-white bg-primary rounded-md hover:bg-indigo-500 focus:outline-none"
+      >
+        Add to Cart
+      </button>
+      <div>
+        <ion-icon name="heart-outline" class="w-6 h-6 text-primary"></ion-icon>
       </div>
     </div>
   </div>

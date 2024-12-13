@@ -1,7 +1,14 @@
-import './assets/css/custom.css'
-import './assets/css/main.css'
+import './assets/css/custom.css';
+import './assets/css/main.css';
 
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import { createPinia } from 'pinia'; // Import Pinia
+import App from './App.vue';
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+// Create and use Pinia
+const pinia = createPinia();
+app.use(pinia);
+
+app.mount('#app');
