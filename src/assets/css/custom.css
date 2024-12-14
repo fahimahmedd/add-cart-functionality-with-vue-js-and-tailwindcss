@@ -2,20 +2,3 @@
   color: #ffd200;
   font-size: 18px;
 }
-.product-price {
-  display: flex;
-  align-items: center;
-  padding: 10px 0;
-}
-.prev-price {
-  font-size: 18px;
-  text-decoration: line-through;
-  text-decoration-color: #8694a5fd;
-  text-decoration-thickness: 1px;
-}
-.new-price {
-  font-size: 26px;
-  font-weight: 700;
-  margin-left: 8px;
-}
-

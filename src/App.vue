@@ -4,7 +4,7 @@ import ProductDetail from './components/products/product-detail.vue';
 
 <template>
   <div class="product-detail">
-    <div class="container mx-auto min-h-screen flex items-center">
+    <div class="container mx-auto min-h-screen pt-5 flex items-center">
        <ProductDetail/>
     </div>
   </div>
